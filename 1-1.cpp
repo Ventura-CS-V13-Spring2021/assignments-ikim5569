@@ -18,9 +18,13 @@ int main(){
 
   cin >> aSold >> bSold >> cSold; 
 
-  double revenue = aSold * rateA + bSold * rateB + cSold * rateC; 
+  double totalA = aSold * rateA;  
+  double totalB = bSold * rateB;  
+  double totalC = cSold * rateC; 
 
-  cout << showpoint << fixed << setprecision(2) << "$" << revenue << endl; 
+  double totalRevenue = totalA + totalB + totalC; 
+
+  cout << showpoint << fixed << setprecision(2) << "$" << totalRevenue << endl; 
 
 
 
