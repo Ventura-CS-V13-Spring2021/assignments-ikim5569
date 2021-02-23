@@ -27,7 +27,15 @@ int main()
     }
     else 
     { 
-      cout << "All numbers are distinct! " << endl; 
+      if (num2 == num3)
+      {
+        cout << " There are two duplicated numbers" << endl; 
+      }
+      else 
+      {
+        cout <<  "All numbers are distinct! " << endl; 
+      }
+   
     }
   }
 }
