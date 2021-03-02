@@ -1,25 +1,21 @@
 #include <iostream> 
 using namespace std; 
 
-
-int main ()
+int main()
 {
-  char c; 
-  int i = 65; 
+  int i = 65;
 
-  while (i < 91){
-    c = i; 
-
-    if (c % 5 == 4){
-      cout << c << " " << endl; 
-    } else {
-      cout << c << " " ; 
+  while (i < 91)
+  {
+    if (i % 5 == 4)
+      {
+        cout << static_cast<char>(i) << " " << endl;
+      } else { 
+        cout << static_cast<char>(i) << " ";
+      }   
+      i++;
     }
-    
-    i++; 
-  }
-
-} 
+}
 
 
 
