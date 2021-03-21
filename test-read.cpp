@@ -23,9 +23,11 @@ int main() {
     sum = sum + salary; 
 
   }
+
+  average = sum/ num; 
   
   cout << "Total: " << sum; 
-  cout << " Average: " << 
+  cout << " Average: " << average; 
 
 
 }
