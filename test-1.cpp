@@ -1,12 +1,13 @@
 #include <iostream> 
 #include <fstream> 
 #include <string> 
+#include <cstdlib>
+#include <ctime>
 using namespace std; 
 
 int main(){
-  int i; 
+  int num; 
 
-  for(i = 2; i< 100; i *= 2)
-    cout << i << "\t"; 
-  cout << endl;
+
+  srand(time(0)); 
 }
