@@ -35,5 +35,5 @@ int main() {
     cout << "none of the numbers are duplicated." << endl; 
   }
 
-  
+  return 0; 
 }
