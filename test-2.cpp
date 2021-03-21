@@ -26,11 +26,11 @@ int main() {
   if ((num1 == num2) && (num1 == num3) ) {
     cout << "All numbers: " << num1 << " " << num2 << " " << num3 << " are duplicated" << endl; 
   } else if ((num1 != num2) && (num1 == num3)){
-    cout << "Numbers " << num1 << " and " << num3 << " are duplicated" << endl;  
+    cout << "2 Numbers " << num1 << " and " << num3 << " are duplicated" << endl;  
   } else if ((num1 == num2) && (num1 != num3)) {
-    cout << "Numbers " << num1 << " and " << num2 << " are duplicated " << endl; 
+    cout << "2 Numbers " << num1 << " and " << num2 << " are duplicated " << endl; 
   } else if ((num1 != num2) && (num2 == num3 )){
-    cout << "Number " << num2 << " and " << num3 << " are duplicated" << endl; 
+    cout << "2 Numbers " << num2 << " and " << num3 << " are duplicated" << endl; 
   } else if ((num1 != num2) && (num2 != num3) && (num1 != num3)){
     cout << "none of the numbers are duplicated." << endl; 
   }
