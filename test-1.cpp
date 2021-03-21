@@ -12,7 +12,7 @@ int main(){
   srand(time(0)); 
 
   previousNumber = rand() % 100; 
-
+  cout << previousNumber << endl; 
 
   for (int i = 1; i < 5; i++) {
     num = rand()%100; 
