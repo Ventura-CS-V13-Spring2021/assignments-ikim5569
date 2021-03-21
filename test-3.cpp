@@ -3,7 +3,7 @@ using namespace std;
 
 int main(){
 
-  int range1, range2, flag; 
+  int range1, range2, i, j; 
 
   cout << "Please enter two values for the range(inclusive). First value should be smaller than second." << endl; 
 
@@ -13,22 +13,19 @@ int main(){
     cout << "Please enter values again: " << endl; 
     cin >> range1 >> range2; 
   }
-  flag = 0; 
 
-  for (int i = range1; i <= range2; i++){
-    for (int j = 2; j < i; j++){
-      if(i%j == 0){
-        flag = 1; 
+  for (i = range1; i <= range2; i++){
+    for (j = 2; j <= i; j++){
+      if(i % j == 0){ 
         break; 
       } 
-    
     }
-    if (flag == 0) {
-        cout << i << "is prime" << endl;
-    } 
-  }
-
-
-
+    if (j == i){
+      cout << i << " is a prime number " << endl; 
+    }
+  } 
   return 0; 
+  
 }
+
+  
