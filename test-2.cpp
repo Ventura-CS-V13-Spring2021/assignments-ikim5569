@@ -8,4 +8,23 @@ int main() {
 
   cin >> num1 >> num2 >> num3; 
 
+  if (num1 < 0 || num1 > 99){
+    cout << "error! type in another value" << endl; 
+    cin >> num1; 
+  }
+
+  if (num2 < 0 || num2 > 99){
+    cout << "error! type in another value" << endl; 
+    cin >> num2; 
+  }
+
+  if (num3 < 0 || num3 > 99){
+    cout << "error! type in another value" << endl; 
+    cin >> num3; 
+  }
+
+  
+
+
+
 }
