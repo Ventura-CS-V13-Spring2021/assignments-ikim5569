@@ -23,8 +23,15 @@ int main() {
     cin >> num3; 
   }
 
+  if (num1 == num2) {
+    if (num1 == num3) {
+      cout << "All numbers: " << num1 << " " << num2 << " " << num3 << " are duplicated" << endl; 
+    }
   
+  if (num1 != num2){
+    if (num1 == num3)
+  }
+  }
 
-
-
+  
 }

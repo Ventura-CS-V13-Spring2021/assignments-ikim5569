@@ -23,5 +23,6 @@ int main(){
     previousNumber = num; 
 
   }
+  return 0; 
 }
 
