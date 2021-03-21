@@ -1,6 +1,4 @@
 #include <iostream> 
-#include <fstream> 
-#include <string> 
 #include <cstdlib>
 #include <ctime>
 using namespace std; 
@@ -15,7 +13,7 @@ int main(){
   cout << previousNumber << endl; 
 
   for (int i = 1; i < 5; i++) {
-    num = rand()%100; 
+    num = rand() % 100; 
     cout << num << endl; 
 
     if (num > previousNumber) {
