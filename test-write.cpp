@@ -24,11 +24,11 @@ int main(){
     cout << "Please enter the individual's ID, name, department, and salary:  " << endl; 
 
     cin >> ID >> name >> department >> salary; 
+
     write << ID; 
-    write << name; 
-    write << department; 
-    write << salary; 
-    write << endl; 
+    write << " " << name; 
+    write << " " << department; 
+    write << " " << salary << endl; 
 
    
 
@@ -39,11 +39,6 @@ int main(){
   write.close(); 
   return 0; 
   
-
-
-
-
-
 
 }
 
