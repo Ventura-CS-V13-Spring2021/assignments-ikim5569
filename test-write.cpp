@@ -30,10 +30,6 @@ int main(){
     write << " " << department; 
     write << " " << salary << endl; 
 
-   
-
-
-
   }
 
   write.close(); 
@@ -41,10 +37,4 @@ int main(){
   
 
 }
-
-// 10981011  John Computer 100000
-
-// 10981012  Johny Network 110000
-
-// 10981013  Johnn HR 90000
 

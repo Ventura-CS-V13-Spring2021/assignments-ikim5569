@@ -14,6 +14,14 @@ int main() {
   read.open("employee.txt"); 
 
   read >> num; 
+  cout << "ID" << "\t"; 
+  cout << "name" << "\t"; 
+  cout << "department" << "\t"; 
+  cout << "salary" << endl; 
+ 
+
+  
+  sum = 0; 
   
   while (read >> ID >> name >> department >> salary){
     cout << ID << "\t"; 
@@ -23,11 +31,13 @@ int main() {
     sum = sum + salary; 
 
   }
-
+  read.close(); 
   average = sum/ num; 
   
   cout << "Total: " << sum; 
   cout << " Average: " << average; 
+
+  return 0; 
 
 
 }
