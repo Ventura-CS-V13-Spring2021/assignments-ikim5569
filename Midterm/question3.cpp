@@ -8,7 +8,7 @@ int getRdNum(void);
 int findMin(int, int, int); 
 int findMax(int, int, int); 
 int getDifference(int, int); 
-
+void fileWrite(ofstream&, int); 
 
 int main(){
   int num1, num2, num3, min, max, difference; 
@@ -33,15 +33,15 @@ int main(){
     difference = getDifference(min, max); 
 
     cout << "difference: " << difference<< endl; 
-
-    write << difference << endl; 
+    fileWrite(write, difference); 
+    
   } while (difference >= 3); 
 
   write.close(); 
 }
 
 int getRdNum(void){
-  int num = random() % 9; 
+  int num = random() % 10; 
   return num; 
 } 
 
@@ -72,5 +72,9 @@ int getDifference(int min, int max){
   int difference;  
   difference = max - min; 
   return difference; 
+} 
+
+void fileWrite(ofstream& write, int difference){
+  write << difference << endl; 
 } 
 
