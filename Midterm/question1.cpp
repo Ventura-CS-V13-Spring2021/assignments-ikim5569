@@ -21,9 +21,9 @@ int main(){
     }
 
     cout << "Student name: " << name; 
-    cout << " score 1: " << test1; 
-    cout << " score 2: " << test2; 
-    cout << " average: " << average << endl; 
+    cout << "   score 1: " << test1; 
+    cout << "   score 2: " << test2; 
+    cout << "   average: " << average << endl; 
   }
   cout << "The total number of students who had a score greater than 80: " << greater << endl; 
   read.close(); 
