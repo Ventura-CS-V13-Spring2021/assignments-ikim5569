@@ -1,5 +1,8 @@
 #include <iostream>
 #include <fstream>
+#include <cstdlib>
+#include <ctime>
+
 using namespace std;
 
 int getRdNum(void); 
@@ -23,5 +26,13 @@ int main(){
  write.close(); 
 }
 
-int getRdNum(void); 
-int isGreater(int); 
+int getRdNum(void){
+  int num; 
+  srand(time(0)); 
+  num = random()% 50 +1; 
+  return num; 
+}
+
+int isGreater(int){
+
+} 
