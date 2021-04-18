@@ -19,6 +19,7 @@ int main(){
 
   srand(time(0)); 
   preceding = random()% 50 + 1; 
+  cout << preceding << endl; 
 
   for(i = 0; i < (N-1); i++){
     num = getRdNum(); 
@@ -33,7 +34,7 @@ int main(){
 int getRdNum(void){
   int num; 
   srand(time(0)); 
-  num = random()% 50 +1; 
+  num = random() % 50 +1; 
   cout << num << endl; 
   return num; 
 }
