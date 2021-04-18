@@ -19,8 +19,9 @@ int main(){
 
   for(i = 0; i < N; i++){
     num = getRdNum(); 
-    if (isGreater(num)){
+    if (isGreater(num, preceding)){
       write << num << endl; 
+      preceding = num; 
     }
   }
  write.close(); 
@@ -33,6 +34,8 @@ int getRdNum(void){
   return num; 
 }
 
-int isGreater(int){
+int isGreater( int num, int preceding){
+  if num < 
+
 
 } 
