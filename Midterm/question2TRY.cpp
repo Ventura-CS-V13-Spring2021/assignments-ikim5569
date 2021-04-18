@@ -23,12 +23,13 @@ int main(){
 
   for(i = 1; i < N; i++){
     num = getRdNum(); 
-  
+    
     if (isGreater(num, preceding)){
-      write << num << endl; 
-      preceding = num; 
+      write << num << endl;
     }
+    preceding = num; 
   }
+  
   write.close(); 
 }
 
