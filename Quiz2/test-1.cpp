@@ -7,7 +7,9 @@ int main(){
   int num, previousNumber; 
 
 
-  srand(time(0)); 
+  srand(time(0)); // Seed for the random number. 
+  // If we use the same seed, we will get the same series of numbers
+//   srand(10);
 
   previousNumber = rand() % 100; 
   cout << previousNumber << endl; 
