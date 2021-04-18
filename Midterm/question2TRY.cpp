@@ -29,7 +29,7 @@ int main(){
       preceding = num; 
     }
   }
- //write.close(); 
+  write.close(); 
 }
 
 int getRdNum(void){
