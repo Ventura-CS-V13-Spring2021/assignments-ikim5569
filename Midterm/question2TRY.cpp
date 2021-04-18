@@ -21,19 +21,19 @@ int main(){
   preceding = random()% 50 + 1; 
   cout << preceding << endl; 
 
-  for(i = 0; i < (N-1); i++){
+  for(i = 1; i < N; i++){
     num = getRdNum(); 
+  
     if (isGreater(num, preceding)){
       write << num << endl; 
       preceding = num; 
     }
   }
- write.close(); 
+ //write.close(); 
 }
 
 int getRdNum(void){
   int num; 
-  srand(time(0)); 
   num = random() % 50 +1; 
   cout << num << endl; 
   return num; 
