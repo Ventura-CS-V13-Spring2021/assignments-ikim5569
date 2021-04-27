@@ -9,6 +9,13 @@ int main()
     int     diff[10];
     int     sum=0;
 
+    for (int i = 0; i < SIZE; i++){
+      sum += numbers[i]; 
+    }
+
+    for (int i = 0; i < SIZE; i++){
+      diff[i] = sum - numbers[i]; 
+    }
     //*** Your code 
 }
 }
