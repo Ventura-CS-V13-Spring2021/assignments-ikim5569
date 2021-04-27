@@ -1,4 +1,5 @@
 #include <iostream> 
+#include <iomanip> 
 using namespace std; 
 
 
@@ -16,6 +17,19 @@ int main()
     for (int i = 0; i < SIZE; i++){
       diff[i] = sum - numbers[i]; 
     }
-    //*** Your code 
-}
+    cout << "These are the arrays and their values: " 
+
+    for (int num: numbers){
+      cout << setw(5) << num; 
+    }
+    cout << endl; 
+
+    for (int num: diff){
+      cout << setw(5) << num; 
+    }
+
+    cout << endl; 
+
+    return 0; 
+
 }
