@@ -17,7 +17,7 @@ int main()
     for (int i = 0; i < SIZE; i++){
       diff[i] = sum - numbers[i]; 
     }
-    cout << "These are the arrays and their values: " 
+    cout << "These are the array elements and their differences: " << endl; 
 
     for (int num: numbers){
       cout << setw(5) << num; 
