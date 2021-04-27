@@ -35,22 +35,26 @@ void printarray(int num[], int size)
         cout << num[i] << "\t";
     cout << endl;
 }
+
 void findmatchnum(int num1[], int size1, int num2[], int size2)
 {
-  int match = 0; 
+  int match = 0;
+  bool repeat;  
   for (int i = 0; i < size2; i++){
     for (int j = 0; j < size1; j++){
-
-      for (int k = (i-1); k = 0; k--) {
-        if (num2[i] == num2[k]) 
+      repeat = false; 
+      for (int k = (i-1); k >= 0; k--) {
+        if (num2[i] == num2[k]) {
+          repeat = true; 
           break; 
+        }
       }
-      // if ((i = 1) && (num2[1] == num2[0])
-      //   break; 
-      // if ((i = 2) && (num2[1] == num2[0])
-      //   break; 
-      // if ((i = 3) && (num2[1] == num2[0])
-      //   break;
+      
+      if (repeat) {
+        break; 
+      }
+  
+      
       if ( num2[i] == num1[j]){
         match++; 
         break; 
