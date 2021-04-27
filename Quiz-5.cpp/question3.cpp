@@ -28,5 +28,21 @@ void printbinary(int num[], int size)
 }
 void count0cluster(int bin[], int size)
 {
+  bool zeroBefore = false; 
+  int cluster = 0; 
+
+  for (int i = 0; i < size; i++){
+    if ((bin[i] == 0) && (zeroBefore == false)){
+      cluster++; 
+      zeroBefore = true; 
+    } 
+
+    if (bin[i] == 1){
+      zeroBefore = false; 
+    }
+
+  }
+
+  cout << "count of clusters: " << cluster << endl; 
   
 }
