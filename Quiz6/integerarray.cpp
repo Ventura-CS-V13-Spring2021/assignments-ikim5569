@@ -21,7 +21,8 @@ void IntegerArray::sortArray(int flag)
           numbers[j+1] = numbers[j]; 
           numbers[j] = temp; 
         }
-  } else {
+  } 
+  if (flag != 0) {
     for (int i = length-1; i > 0; i--)
       for (int j = 0; i < i; j++)
         if (numbers[j] < numbers[j+1])
@@ -31,7 +32,7 @@ void IntegerArray::sortArray(int flag)
           numbers[j] = temp; 
         }
   }
-
+  
 }
 
 void IntegerArray::fillUp(void)
