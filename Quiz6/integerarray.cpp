@@ -14,7 +14,7 @@ void IntegerArray::sortArray(int flag)
 { 
   if (flag == 0){
     for (int i = length-1; i > 0; i--)
-      for (int j = 0; i < i; j++)
+      for (int j = 0; j < i; j++)
         if (numbers[j] > numbers[j+1])
         {
           int temp = numbers[j+1]; 
@@ -24,7 +24,7 @@ void IntegerArray::sortArray(int flag)
   } 
   if (flag != 0) {
     for (int i = length-1; i > 0; i--)
-      for (int j = 0; i < i; j++)
+      for (int j = 0; j < i; j++)
         if (numbers[j] < numbers[j+1])
         {
           int temp = numbers[j+1]; 
