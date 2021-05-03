@@ -5,35 +5,31 @@
 using namespace std; 
 
 
-int IntegerArray::getLength(void) const;
+int IntegerArray::getLength(void) const
 {
   return length; 
 }
 
-void IntegerArray::sortArray(int flag)  // if flag is 0, ascending, otherwise descending
-{
-  if (flag == 0)
-  {
+void IntegerArray::sortArray(int flag)
+{ 
+  if (flag == 0){
     for (int i = length-1; i > 0; i--)
       for (int j = 0; i < i; j++)
         if (numbers[j] > numbers[j+1])
         {
-          int temporary = numbers[j+1]; 
+          int temp = numbers[j+1]; 
           numbers[j+1] = numbers[j]; 
-          numbers[j] = temporary; 
+          numbers[j] = temp; 
         }
-  }
-  else 
-  {
+  } else {
     for (int i = length-1; i > 0; i--)
       for (int j = 0; i < i; j++)
         if (numbers[j] < numbers[j+1])
         {
-          int temporary = numbers[j+1]; 
+          int temp = numbers[j+1]; 
           numbers[j+1] = numbers[j]; 
-          numbers[j] = temporary; 
+          numbers[j] = temp; 
         }
-
   }
 
 }
@@ -50,10 +46,10 @@ void IntegerArray::fillUp(void)
 
 int IntegerArray::getPrimenumber(void) const
 {
-  int primeNum = 0; 
-  for (int i = 0; i < length; i++)
+  int primeNum = 0, i, j; 
+  for (i = 0; i < length; i++)
   {
-    for (int j = 2; j <= i; j++){
+    for (j = 2; j <= i; j++){
       if (i%j == 0)
         break; 
     }
