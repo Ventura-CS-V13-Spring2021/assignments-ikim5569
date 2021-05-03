@@ -1,12 +1,14 @@
-#include <iostream>
-#include "integerarray.hpp" 
+#include <iostream> 
+#include <cstdlib>
+#include <ctime>
+#include "integerarray.hpp"
 using namespace std; 
+
 
 int IntegerArray::getLength(void) const;
 {
   return length; 
 }
-
 
 void IntegerArray::sortArray(int flag)  // if flag is 0, ascending, otherwise descending
 {
@@ -46,12 +48,12 @@ void IntegerArray::fillUp(void)
   }
 }
 
-void IntegerArray::getPrimenumber(void) const
+int IntegerArray::getPrimenumber(void) const
 {
   int primeNum = 0; 
   for (int i = 0; i < length; i++)
   {
-    for (j = 2; j <= i; j++){
+    for (int j = 2; j <= i; j++){
       if (i%j == 0)
         break; 
     }

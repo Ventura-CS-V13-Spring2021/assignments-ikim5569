@@ -1,6 +1,9 @@
 #include <iostream> 
+#include <cstdlib>
+#include <ctime>
 #include "integerarray.hpp"
 using namespace std; 
+
 
 int IntegerArray::getLength(void) const
 {
