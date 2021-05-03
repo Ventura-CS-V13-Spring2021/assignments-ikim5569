@@ -50,11 +50,11 @@ int IntegerArray::getPrimenumber(void) const
   int primeNum = 0, i, j; 
   for (i = 0; i < length; i++)
   {
-    for (j = 2; j <= i; j++){
-      if (i%j == 0)
+    for (j = 2; j <= numbers[i]; j++){
+      if (numbers[i]%j == 0)
         break; 
     }
-    if (j==i) 
+    if (j==numbers[i]) 
       primeNum++; 
   }
   return primeNum; 
