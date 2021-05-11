@@ -33,7 +33,8 @@ Coordinate Rectangle::getCenter()
 {
   double xCenter = (rt.getX() - lb.getX())/2; 
   double yCenter = (rt.getY() - lb.getY())/2; 
-  center = (xCenter, yCenter); 
+  center.x = xCenter; 
+  center.y = yCenter;  
   return center; 
 
   // MAY BE PROBLEMEATIC 
@@ -42,6 +43,7 @@ void Rectangle::setLBRT(Coordinate lbval, Coordinate rtval)
 {
   lb = lbval; 
   rt = rtval; 
+  
   // The area and center value should be set with the new value.
 }
 void Rectangle::printRectangle() const
