@@ -15,7 +15,7 @@ Coordinate::Coordinate(double xval, double yval) : x(xval), y(yval)
 {
 
 }
-int Coordinate::getX() 
+int Coordinate::getX() const
 {
   return x; 
 }
@@ -25,7 +25,7 @@ int Coordinate::getY() const
   return y; 
 }
 
-void Coordinate::setXY(double xval, double yval)
+void Coordinate::setXY(double xval, double yval) 
 {
   x = xval; 
   y = yval; 

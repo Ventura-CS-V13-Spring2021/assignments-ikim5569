@@ -24,11 +24,11 @@ Coordinate Rectangle::getRT() const
 {
   return rt; 
 }
-double Rectangle::getArea()
+double Rectangle::getArea() const
 {
-  double xDifference =3; //rt.getX();  
-  // double yDifference = rt.getY() - lb.getY(); 
-  // double area = xDifference * yDifference; 
+  double xDifference = rt.getX();  
+  double yDifference = rt.getY() - lb.getY(); 
+  area = xDifference * yDifference; 
   return xDifference; 
 }
 Coordinate Rectangle::getCenter()
@@ -57,7 +57,7 @@ void Rectangle::printRectangle() const
   rt.printXY(); 
   cout << "Center: "; 
   center.printXY(); 
-  cout << "Area: " << x.getArea() << endl; 
+  cout << "Area: " << area << endl; 
   cout << " " << endl; 
 }
 
