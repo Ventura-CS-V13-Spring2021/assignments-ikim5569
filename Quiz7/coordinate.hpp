@@ -1,4 +1,8 @@
+#ifndef COORDINATE_H
 #define COORDINATE_H
+
+
+using namespace std; 
 class Coordinate
 {
 private:
