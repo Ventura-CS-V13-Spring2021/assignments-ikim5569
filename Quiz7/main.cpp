@@ -1,7 +1,5 @@
-#include "rectangle.hpp"
 #include "coordinate.hpp"
-#include <iostream>
-using namespace std; 
+#include "rectangle.hpp"
 
 int main()
 {
@@ -16,3 +14,4 @@ int main()
     r1.setLBRT(lbval, rtval);
     r1.printRectangle();
 }
+

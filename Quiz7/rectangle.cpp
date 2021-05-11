@@ -1,6 +1,7 @@
 #include "coordinate.hpp"
 #include "rectangle.hpp"
 
+
 #include <iostream>
 #include <string>
 using namespace std;
@@ -14,6 +15,7 @@ Rectangle::Rectangle(Coordinate lbval, Coordinate rtval) : lb(lbval), rt(rtval)
 {
 
 }
+
 Coordinate Rectangle::getLB() const
 {
   return lb; 
@@ -26,7 +28,7 @@ double Rectangle::getArea()
 {
   double xDifference = rt.getX() - lb.getX(); 
   double yDifference = rt.getY() - lb.getY(); 
-  double area =xDifference * yDifference; 
+  double area = xDifference * yDifference; 
   return area; 
 }
 Coordinate Rectangle::getCenter()

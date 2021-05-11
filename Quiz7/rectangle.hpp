@@ -1,7 +1,7 @@
 #ifndef RECTANGLE_H
 #define RECTANGLE_H
 #include "coordinate.hpp"
-using namespace std; 
+
 
 class Rectangle
 {
