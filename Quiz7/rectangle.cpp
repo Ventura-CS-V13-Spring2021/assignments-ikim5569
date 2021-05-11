@@ -35,9 +35,7 @@ Coordinate Rectangle::getCenter()
 {
   double xCenter = (rt.getX() - lb.getX())/2; 
   double yCenter = (rt.getY() - lb.getY())/2; 
-  center.x = xCenter; 
-  center.y = yCenter;  
-  return center; 
+  center.setXY(xCenter, yCenter); 
 
   // MAY BE PROBLEMEATIC 
 }
