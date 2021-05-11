@@ -6,7 +6,7 @@
 using namespace std;
 
 
-Coordinate::Coordinate() : x(0), y(0)
+Coordinate::Coordinate() : x(0.0), y(0.0)
 {
 
 }
@@ -15,7 +15,7 @@ Coordinate::Coordinate(double xval, double yval) : x(xval), y(yval)
 {
 
 }
-int Coordinate::getX() const
+int Coordinate::getX() 
 {
   return x; 
 }

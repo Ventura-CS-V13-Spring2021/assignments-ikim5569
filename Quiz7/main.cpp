@@ -7,6 +7,11 @@ int main()
     Coordinate rtval(10.0, 10.0);
     Rectangle r1(lbval, rtval);
 
+    double hey = lbval.getX(); 
+    cout << hey << "IS THIS WORKING" <<  endl; 
+    cout << "IS THIS WORKING " << endl; 
+
+
     r1.printRectangle();
 
     lbval.setXY(-20.0, -20.0);
