@@ -27,15 +27,17 @@ Coordinate Rectangle::getRT() const
 double Rectangle::getArea() 
 {
   double xDifference = rt.getX() - lb.getX();  
-  double yDifference = rt.getY() - lb.getY(); 
+  double yDifference = rt.getY() - lb.getY();
+  area = xDifference  *yDifference; 
+  //area = 0.5; 
   
   return area; 
 }
 
 Coordinate Rectangle::getCenter()
 {
-  double xCenter = 10;//(rt.getX() - lb.getX())/2; 
-  double yCenter = 10;//(rt.getY() - lb.getY())/2; 
+  double xCenter = (rt.getX() - lb.getX())/2; 
+  double yCenter = (rt.getY() - lb.getY())/2; 
   center.setXY(xCenter, yCenter); 
 
   return center; 
@@ -57,8 +59,6 @@ void Rectangle::printRectangle() const
   cout << "Right top: "; 
   rt.printXY(); 
   cout << "get x:" ; 
-  double xi = rt.getY() - lb.getY(); 
-  cout << xi << endl; 
   cout << "Center: "; 
   center.printXY(); 
   cout << "Area: " << area << endl; 
