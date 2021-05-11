@@ -1,11 +1,10 @@
-private:
-    double x;
-    double y;
+#include "coordinate.hpp"
+#include "rectangle.hpp"
 
-public:
-    Coordinate();
-    
-};
+#include <iostream>
+#include <string>
+using namespace std;
+
 
 Coordinate::Coordinate() : x(0), y(0)
 {
