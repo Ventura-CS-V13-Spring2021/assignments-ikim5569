@@ -26,10 +26,10 @@ Coordinate Rectangle::getRT() const
 }
 double Rectangle::getArea()
 {
-  double xDifference = rt.getX() - lb.getX(); 
-  double yDifference = rt.getY() - lb.getY(); 
-  double area = xDifference * yDifference; 
-  return area; 
+  double xDifference =3; //rt.getX();  
+  // double yDifference = rt.getY() - lb.getY(); 
+  // double area = xDifference * yDifference; 
+  return xDifference; 
 }
 Coordinate Rectangle::getCenter()
 {
@@ -55,7 +55,7 @@ void Rectangle::printRectangle() const
   rt.printXY(); 
   cout << "Center: "; 
   center.printXY(); 
-  cout << "Area: " << area << endl; 
+  cout << "Area: " << x.getArea() << endl; 
   cout << " " << endl; 
 }
 
