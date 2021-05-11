@@ -60,7 +60,6 @@ void Rectangle::printRectangle() const
   lb.printXY(); 
   cout << "Right top: "; 
   rt.printXY(); 
-  cout << "get x:" ; 
   cout << "Center: "; 
   center.printXY(); 
   cout << "Area: " << area << endl; 
