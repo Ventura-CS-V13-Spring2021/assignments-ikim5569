@@ -12,5 +12,6 @@ int main()
     rtval.setXY(20.0, 20.0);
     r1.setLBRT(lbval, rtval);
     r1.printRectangle();
+
 }
 

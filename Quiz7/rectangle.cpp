@@ -36,8 +36,8 @@ double Rectangle::getArea()
 
 Coordinate Rectangle::getCenter()
 {
-  double xCenter = (rt.getX() + lb.getX())/2; 
-  double yCenter = (rt.getY() + lb.getY())/2; 
+  double xCenter = (rt.getX() + lb.getX())/2.0; 
+  double yCenter = (rt.getY() + lb.getY())/2.0; 
   center.setXY(xCenter, yCenter); 
 
   return center; 
