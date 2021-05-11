@@ -5,7 +5,7 @@ private:
     double area;
 
 public:
-    Rectangle::Rectangle(): lb(0), rt(0), center(0), area(0)
+    Rectangle::Rectangle(): lb(0,0), rt(0,0), center(0,0), area(0)
     {
 
     }
@@ -32,7 +32,26 @@ public:
     {
       double xCenter = (rt.getX() - lb.getX())/2; 
       double yCenter = (rt.getY() - lb.getY())/2; 
+      center = (xCenter, yCenter); 
+      return center; 
+
+      // MAY BE PROBLEMEATIC 
     }
-    void setLBRT(Coordinate lbval, Coordinate rtval);
-    void printRectangle() const;
+    void Rectangle::setLBRT(Coordinate lbval, Coordinate rtval)
+    {
+      lb = lbval; 
+      rt = rtval; 
+      // The area and center value should be set with the new value.
+    }
+    void Rectangle::printRectangle() const
+    {
+      cout << "Center: "; 
+      center.pritnxy
+    }
+
+    Coordinate lb;
+    Coordinate rt;
+    Coordinate center;
+    double area;
+  
 };
