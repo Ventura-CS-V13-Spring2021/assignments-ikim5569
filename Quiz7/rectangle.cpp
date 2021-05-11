@@ -7,11 +7,11 @@
 using namespace std;
 
 
-Rectangle::Rectangle(): lb(0,0), rt(0,0), center(0,0), area(0)
+Rectangle::Rectangle(): lb(0,0), rt(0,0), center(0,0), area(0.0)
 {
 
 }
-Rectangle::Rectangle(Coordinate lbval, Coordinate rtval) : lb(lbval), rt(rtval)
+Rectangle::Rectangle(Coordinate lbval, Coordinate rtval) : lb(lbval), rt(rtval), area(getArea()), center(getCenter()) 
 {
 
 }
@@ -24,13 +24,14 @@ Coordinate Rectangle::getRT() const
 {
   return rt; 
 }
-double Rectangle::getArea() const
+double Rectangle::getArea() 
 {
-  double xDifference = rt.getX();  
+  double xDifference = rt.getX() - lb.getX();  
   double yDifference = rt.getY() - lb.getY(); 
-  area = xDifference * yDifference; 
-  return xDifference; 
+  
+  return area; 
 }
+
 Coordinate Rectangle::getCenter()
 {
   double xCenter = 10;//(rt.getX() - lb.getX())/2; 
@@ -55,6 +56,9 @@ void Rectangle::printRectangle() const
   lb.printXY(); 
   cout << "Right top: "; 
   rt.printXY(); 
+  cout << "get x:" ; 
+  double xi = rt.getY() - lb.getY(); 
+  cout << xi << endl; 
   cout << "Center: "; 
   center.printXY(); 
   cout << "Area: " << area << endl; 
