@@ -10,3 +10,4 @@ buildall: main.o student.o
 clean:
 	bin/rm -rf *.o a.out 
 
+
