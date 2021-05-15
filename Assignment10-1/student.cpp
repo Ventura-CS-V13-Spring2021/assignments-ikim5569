@@ -22,17 +22,7 @@ Student::Student(const Student& stud)
   for (int i = 0; i < used; i++)
     classList[i] = stud.classList[i]; 
 }
-
-void Student::printValues() 
-{ 
-  if (numClasses == 0)
-    cout << "No classes entered" << endl; 
-  for (int i = 0; i < used; i++)
-  {
-    cout << "class " << i+1 << ": " << classList[i] << endl; 
-  } 
-  cout << " " << endl; 
-}
+c
 
 void Student::reset()
 {
