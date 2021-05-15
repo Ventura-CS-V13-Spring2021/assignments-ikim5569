@@ -9,7 +9,7 @@ class Student
   
     Student(); 
     Student(string n, int num); 
-    Student(Student &rhs); // Copy Constructor
+    Student(const Student& rhs); // Copy Constructor
     void input(string n, int num); 
     void printValues();
     void reset(); 
@@ -42,7 +42,7 @@ Student::Student(string n, int num) : name(n), num_classes(num)
    }
 }
 
-Student::Student(Student &rhs)
+Student::Student( const Student& rhs)
 {
   name = rhs.name; 
   num_classes = rhs.num_classes; 
@@ -50,6 +50,8 @@ Student::Student(Student &rhs)
   for (int i = 0; i < used; i++)
     class_list[i] = rhs.class_list[i]; 
 } 
+
+
 
 
 void Student::input(string n, int num)
@@ -68,7 +70,7 @@ void Student::input(string n, int num)
 void Student::printValues() 
 {  
   cout << "NAME: " << name << endl; 
-  for (int i = 0; i < used; i++)
+  for (int i = 0; i < num_classes; i++)
   {
     cout << "class " << i+1 << ": " << class_list[i] << endl; 
   } 
@@ -78,7 +80,7 @@ void Student::printValues()
 void Student::reset()
 {
   num_classes = 0; 
-  (delete [ ] class_list); 
+  //delete [] class_list; 
 }
 
 Student& Student::operator = (const Student& rhs)
@@ -122,19 +124,18 @@ void testStudent()
 
   Student first("Irene", classnum); 
   first.printValues(); 
-  Student second(first); 
+  //Student second(first); 
 
-  cout << "testing copy constructor: printing student 2" << endl; 
-  second.printValues(); 
+  // cout << "testing copy constructor: printing student 2" << endl; 
+  // second.printValues(); 
 
   cout << "testing input " << endl; 
-  first.input("Jane", 5); 
+  first.input("Jane", 2); 
   first.printValues(); 
 
   cout << "Resetting student 1" << endl; 
   first.reset(); 
-  cout << "printing info for student one " << endl; 
-  first.printValues(); 
+  
 
 
 
