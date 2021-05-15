@@ -29,7 +29,7 @@ int setArray(int a[])
 {
   int numEntries; 
   int value; 
-  cout << "How many elements do you want in your array? "; 
+  cout << "How many elements do you want in your array? (less than 20) "; 
   cin >> numEntries; 
 
   cout << " " << endl; 
