@@ -27,6 +27,30 @@ Student::Student(Student &rhs)
     class_list[i] = rhs.class_list[i]; 
 } 
 
+Student::Student(string n, int num)
+{
+   name = n;
+   num_classes = num;
+   class_list = new string[num];
+   for (int i = 0; i < num_classes; i++)
+   {
+       cout << "Enter the course name : ";
+       cin >> class_list[i];
+   }
+}
+
+Student void::input(string n, int num)
+{
+  name = n;
+   num_classes = num;
+   class_list = new string[num];
+   for (int i = 0; i < num_classes; i++)
+   {
+       cout << "Enter the course name : ";
+       cin >> class_list[i];
+   }
+
+}
 
 void Student::printValues() 
 {  
@@ -52,4 +76,10 @@ Student& Student::operator = (const Student& rhs)
   for (int i = 0; i < num_classes; i++)
     class_list[i] = rhs.class_list[i]; 
 
+}
+
+
+Student::~Student()
+{
+  delete [] class_list; 
 }

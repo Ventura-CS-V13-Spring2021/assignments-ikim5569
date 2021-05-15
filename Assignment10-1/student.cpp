@@ -22,7 +22,7 @@ Student::Student(const Student& stud)
   for (int i = 0; i < used; i++)
     classList[i] = stud.classList[i]; 
 }
-c
+
 
 void Student::reset()
 {
