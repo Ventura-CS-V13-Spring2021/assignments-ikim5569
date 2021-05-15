@@ -1,6 +1,7 @@
 #include <iostream> 
 using namespace std; 
 
+int setArray(int a[]); 
 void sort(int a[], int length); 
 // sorts from greatest to least; 
 
@@ -32,6 +33,26 @@ int main()
 
 }
 
+int setArray(int a[]) 
+{
+  int numEntries; 
+  int value; 
+  cout << "How many elements do you want in your array? "; 
+  cin >> numEntries; 
+
+  cout << "Now enter values for each element; the # of values should correspond EXACTLY to the number of elements you requested before. Do not include -100 as one of your values" << endl; 
+
+  cout << "Please enter -100 to signal you are done. " << endl; 
+
+  cin >> value
+  do{
+
+  } while ()
+
+  return numEntries; 
+
+
+}
 
 void sort(int a[], int length)
 {
