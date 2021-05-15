@@ -15,10 +15,42 @@ int main()
   sort(arr); 
   print(arr); 
   
-  bool switched = false; 
+  bool switched = true; 
+  int count = 0; 
 
   for (int i = 0; i < N; i++)
   {
+    if ( i == 0)
+    {
+      count = 1; 
+      switched = false; 
+    }
+    if (switched == false)
+    {
+      if (arr[i] == arr[i-1])
+      {
+        count++; 
+      } 
+      else if (arr[i] != arr[i-1])
+      {
+        cout << arr[i - 1] << "\t" << count << endl; 
+        switched = true; 
+      }
+    }
+    if (switched == true)
+    {
+      count = 1; 
+      if (arr[i] == arr[i-1])
+      {
+        count++; 
+        switched = false; 
+      } 
+      else if (arr[i] != arr[i-1])
+      {
+        cout << arr[i - 1] << "\t" << count << endl; 
+        switched = true; 
+      } 
+    }
     
   }
 
@@ -41,6 +73,7 @@ void sort(int a[])
 void print(int a[])
 {
   for (int i = 0; i < N; i++)
-    cout << a[i] << endl; 
+    cout << a[i] << "\t"; 
+  cout << endl; 
 }
 
