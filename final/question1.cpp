@@ -10,27 +10,31 @@ int main()
   int arr[6] = {1,2,8,11,13, 23};
   int second[6] = {10,20,21,23,41}; 
 
-  int elementWithMost; 
-  int highestnumelements; 
-  int numElements; 
+  int elementWithMost;  
+  int highestnumFactors = 0;  
+  int numFactors; 
 
   for (int i = 0; i < 6; i++)
   {
-    numElements = 0; 
+    numFactors = 0; 
     for (int j = 1; j < arr[i]; j++)
     {
       if (arr[i]%j == 0)
       {
-        numElements++; 
-        cout << "num elements" << numElements << endl; 
+        numFactors++; 
+        cout << "num factors for" << arr[i] << " is " << numFactors << endl; 
 
       }
     }
-    if (numElements > highestnumelements)
-      highestnumelements = numElements; 
+    if (numFactors > highestnumFactors)
+    {
+      highestnumFactors = numFactors; 
       elementWithMost = i; 
-      cout << elementWithMost << endl; 
+
+    }
   }
+
+  cout << "element with most factors is: " << elementWithMost << " which is " << arr[elementWithMost] << endl; 
   
 
   // highestIndex = getNumDiv(arr, 6); 
