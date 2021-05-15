@@ -10,26 +10,19 @@ void print(int a[], int length);
 
 void count(int a[], int length); 
 
+const int N = 20; 
 
 int main()
 {
-  int firstlength;
-  int secondlength;  
-  int arr[16] = {-12, 3, -12, 4, 1, 1, -12, 1, -1, 1, 2, 3, 4, 2, 3, -12}; 
+  int arr[20]; 
+  int length; 
+  length = setArray(arr); 
 
-  int second[12] = {-5,-6,-6,-7,0,0,1,4,5,7,8,-3}; 
-  firstlength = 16;
-  secondlength = 12; 
+  sort(arr, length); 
+  print(arr, length); 
+  count(arr, length); 
 
-  sort(arr, firstlength); 
-  print(arr, firstlength); 
-  count(arr, firstlength); 
 
-  sort(second, secondlength); 
-  print(second, secondlength); 
-  count(second, secondlength);
-  
-  
 
 }
 
@@ -40,17 +33,19 @@ int setArray(int a[])
   cout << "How many elements do you want in your array? "; 
   cin >> numEntries; 
 
-  cout << "Now enter values for each element; the # of values should correspond EXACTLY to the number of elements you requested before. Do not include -100 as one of your values" << endl; 
+  cout << " " << endl; 
 
-  cout << "Please enter -100 to signal you are done. " << endl; 
+  cout << "Enter the element values" << endl; 
 
-  cin >> value
-  do{
-
-  } while ()
-
+  cin >> value; 
+  
+    for (int i = 0; i < numEntries; i++)
+    {
+        a[i] = value; 
+        cin >> value;
+   
+    }
   return numEntries; 
-
 
 }
 
