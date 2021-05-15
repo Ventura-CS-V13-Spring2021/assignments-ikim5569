@@ -1,26 +1,27 @@
 #include <iostream> 
 using namespace std; 
 
-void sort(int a[]); 
+void sort(int a[], int length); 
 // sorts from greatest to least; 
 
-void print(int a[]); 
+void print(int a[], int length); 
 //prints all elements 
 
-const int N = 16; 
+
 int main()
 {
-  int arr[N] = {-12, 3, -12, 4, 1, 1, -12, 1, -1, 1, 2, 3, 4, 2, 3, -12}; 
-
-  sort(arr); 
-  print(arr); 
+  int length; 
+  int arr[20] = {-12, 3, -12, 4, 1, 1, -12, 1, -1, 1, 2, 3, 4, 2, 3, -12}; 
+  length = sizeof(arr)/sizeof(arr[0]); 
+  sort(arr, length); 
+  print(arr, length); 
   
   cout << " " << endl; 
   cout << "N" << "\t" << "COUNT" << endl; 
   bool switched = true; 
   int count = 0; 
 
-  for (int i = 0; i < N + 1; i++)
+  for (int i = 0; i < length + 1; i++)
   {
     if ( i == 0)
     {
@@ -58,9 +59,9 @@ int main()
 }
 
 
-void sort(int a[])
+void sort(int a[], int length)
 {
-  for (int i = N-1; i > 0; i--)
+  for (int i = length-1; i > 0; i--)
       for (int j = 0; j < i; j++)
         if (a[j] < a[j+1])
         {
@@ -70,9 +71,9 @@ void sort(int a[])
         }
 }
 
-void print(int a[])
+void print(int a[], int length)
 {
-  for (int i = 0; i < N; i++)
+  for (int i = 0; i < length; i++)
     cout << a[i] << "\t"; 
   cout << endl; 
 }
