@@ -14,6 +14,8 @@ class Student
     void input(string n, int num); 
     void printValues();
     void reset(); 
+    int getNumClasses() { return num_classes; } ; 
+    int getName() { return name; } ; 
     Student& operator = (const Student& rhs); // overloaded operator
     ~Student(); // destructor  
     

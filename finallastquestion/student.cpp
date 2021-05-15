@@ -4,7 +4,10 @@
 using namespace std;
 
 
-Student::Student() : name(), num_classes(0), class_list(NULL){};
+Student::Student() : name(), num_classes(0)
+{
+  class_list = new string[num_classes]; 
+}
 
 Student::Student(string n, int num)
 {
@@ -27,21 +30,10 @@ Student::Student(Student &rhs)
     class_list[i] = rhs.class_list[i]; 
 } 
 
-Student::Student(string n, int num)
-{
-   name = n;
-   num_classes = num;
-   class_list = new string[num];
-   for (int i = 0; i < num_classes; i++)
-   {
-       cout << "Enter the course name : ";
-       cin >> class_list[i];
-   }
-}
 
-Student void::input(string n, int num)
+void Student::input(string n, int num)
 {
-  name = n;
+    name = n;
    num_classes = num;
    class_list = new string[num];
    for (int i = 0; i < num_classes; i++)

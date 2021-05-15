@@ -52,6 +52,8 @@ Student& Student::operator = (const Student& rightSide)
     classList[i] = rightSide.classList[i]; 
 }
 
+
+
 Student::~Student()
 {
   delete [] classList; 
