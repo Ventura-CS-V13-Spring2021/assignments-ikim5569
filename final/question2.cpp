@@ -1,21 +1,26 @@
 #include <iostream> 
 using namespace std; 
 
-void sort(int a[], int length); 
+void sort(int a[]); 
 // sorts from greatest to least; 
 
 void print(int a[]); 
 //prints all elements 
 
-const int N = 20; 
+const int N = 16; 
 int main()
 {
   int arr[N] = {-12, 3, -12, 4, 1, 1, -12, 1, -1, 1, 2, 3, 4, 2, 3, -12}; 
 
-  //sort(arr); 
+  sort(arr); 
   print(arr); 
   
+  bool switched = false; 
 
+  for (int i = 0; i < N; i++)
+  {
+    
+  }
 
 
 }
