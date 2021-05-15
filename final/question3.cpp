@@ -97,6 +97,7 @@ Student::~Student()
   delete [] class_list; 
 }
 
+void testStudent();
 
 int main()
 {
@@ -105,7 +106,7 @@ int main()
 
   do 
   {
-    // testStudent(); 
+    testStudent(); 
     cout << "Test again? (y/n)" << endl; 
     cin >> ans; 
   } while ((ans == 'y') || (ans == 'Y')); 
@@ -119,8 +120,25 @@ void testStudent()
   cout << "Enter the number of classes you are currently enrolled in : "; 
   cin >> classnum; 
 
-  Student first("Irene", 5); 
+  Student first("Irene", classnum); 
+  first.printValues(); 
+  Student second(first); 
+
+  cout << "testing copy constructor: printing student 2" << endl; 
+  second.printValues(); 
+
+  cout << "testing input " << endl; 
+  first.input("Jane", 5); 
+  first.printValues(); 
+
+  cout << "Resetting student 1" << endl; 
+  first.reset(); 
+  cout << "printing info for student one " << endl; 
+  first.printValues(); 
+
 
 
 
 }
+
+
