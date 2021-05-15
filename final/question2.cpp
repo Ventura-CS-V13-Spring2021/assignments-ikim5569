@@ -15,17 +15,19 @@ int main()
   sort(arr); 
   print(arr); 
   
+  cout << " " << endl; 
+  cout << "N" << "\t" << "COUNT" << endl; 
   bool switched = true; 
   int count = 0; 
 
-  for (int i = 0; i < N; i++)
+  for (int i = 0; i < N + 1; i++)
   {
     if ( i == 0)
     {
       count = 1; 
       switched = false; 
     }
-    if (switched == false)
+    else if (switched == false)
     {
       if (arr[i] == arr[i-1])
       {
@@ -36,8 +38,8 @@ int main()
         cout << arr[i - 1] << "\t" << count << endl; 
         switched = true; 
       }
-    }
-    if (switched == true)
+    } 
+    else if (switched == true)
     {
       count = 1; 
       if (arr[i] == arr[i-1])
@@ -51,9 +53,7 @@ int main()
         switched = true; 
       } 
     }
-    
   }
-
 
 }
 
