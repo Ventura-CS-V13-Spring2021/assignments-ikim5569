@@ -9,16 +9,25 @@ int main()
   int highestIndex; 
   int arr[6] = {1,2,8,11,13, 23};
   int second[5] = {10,20,21,23,41}; 
+  int third[4] = {50, 61, 73}; 
 
   
 
   highestIndex = getNumDiv(arr, 6); 
-  cout << "Index with most factors in arr is " << highestIndex << endl; 
+  cout << "Index with most factors in arr is element " << highestIndex << " which is " << arr[highestIndex] << endl; 
+
+  cout << " " << endl; 
 
   highestIndex = getNumDiv(second, 5); 
-  cout << "Index with most factors in array second is " << highestIndex << endl; 
+  cout << "Index with most factors in array second is element " << highestIndex << " which is " << second[highestIndex] << endl;
 
 
+  cout << " " << endl; 
+
+  highestIndex = getNumDiv(third, 3); 
+  cout << "Index with most factors in array third is element " << highestIndex << " which is " << third[highestIndex] << endl; 
+
+  cout << " " << endl; 
   return 0; 
   
   
@@ -38,11 +47,13 @@ int getNumDiv(int a[], int elements)
     {
       if (a[i]%j == 0)
       {
-        numFactors++; 
-        cout << "num factors for" << a[i] << " is " << numFactors << endl; 
+        numFactors++;  
 
       }
     }
+    cout << "num factors in element " << a[i] << " is " << numFactors << endl;
+
+    
     if (numFactors > highestnumFactors)
     {
       highestnumFactors = numFactors; 
@@ -50,6 +61,8 @@ int getNumDiv(int a[], int elements)
 
     }
   }
+
+  return elementWithMost; 
 } 
 
 
