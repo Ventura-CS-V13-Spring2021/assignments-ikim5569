@@ -23,7 +23,6 @@ int main()
   count(arr, length); 
 
 
-
 }
 
 int setArray(int a[]) 
@@ -42,8 +41,8 @@ int setArray(int a[])
     for (int i = 0; i < numEntries; i++)
     {
         a[i] = value; 
-        cin >> value;
-   
+        if (i != numEntries -1)
+          cin >> value;
     }
   return numEntries; 
 
