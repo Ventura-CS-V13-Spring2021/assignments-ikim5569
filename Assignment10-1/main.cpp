@@ -29,7 +29,7 @@ void testStudent()
 
   Student first(classnum); 
 
-  cout << "Enter exactly " << classnum << " course names " << endl;
+  cout << "Enter exactly " << classnum << " course names. Write 'stop' at the end " << endl;
 
   string next;
   cin >> next; 
