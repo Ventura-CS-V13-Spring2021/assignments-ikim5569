@@ -7,54 +7,28 @@ void sort(int a[], int length);
 void print(int a[], int length); 
 //prints all elements 
 
+void count(int a[], int length); 
+
 
 int main()
 {
-  int length; 
-  int arr[20] = {-12, 3, -12, 4, 1, 1, -12, 1, -1, 1, 2, 3, 4, 2, 3, -12}; 
-  length = sizeof(arr)/sizeof(arr[0]); 
-  sort(arr, length); 
-  print(arr, length); 
-  
-  cout << " " << endl; 
-  cout << "N" << "\t" << "COUNT" << endl; 
-  bool switched = true; 
-  int count = 0; 
+  int firstlength;
+  int secondlength;  
+  int arr[16] = {-12, 3, -12, 4, 1, 1, -12, 1, -1, 1, 2, 3, 4, 2, 3, -12}; 
 
-  for (int i = 0; i < length + 1; i++)
-  {
-    if ( i == 0)
-    {
-      count = 1; 
-      switched = false; 
-    }
-    else if (switched == false)
-    {
-      if (arr[i] == arr[i-1])
-      {
-        count++; 
-      } 
-      else if (arr[i] != arr[i-1])
-      {
-        cout << arr[i - 1] << "\t" << count << endl; 
-        switched = true; 
-      }
-    } 
-    else if (switched == true)
-    {
-      count = 1; 
-      if (arr[i] == arr[i-1])
-      {
-        count++; 
-        switched = false; 
-      } 
-      else if (arr[i] != arr[i-1])
-      {
-        cout << arr[i - 1] << "\t" << count << endl; 
-        switched = true; 
-      } 
-    }
-  }
+  int second[12] = {-5,-6,-6,-7,0,0,1,4,5,7,8,-3}; 
+  firstlength = 16;
+  secondlength = 12; 
+
+  sort(arr, firstlength); 
+  print(arr, firstlength); 
+  count(arr, firstlength); 
+
+  sort(second, secondlength); 
+  print(second, secondlength); 
+  count(second, secondlength);
+  
+  
 
 }
 
@@ -73,8 +47,52 @@ void sort(int a[], int length)
 
 void print(int a[], int length)
 {
+  cout << " " << endl; 
   for (int i = 0; i < length; i++)
     cout << a[i] << "\t"; 
   cout << endl; 
+}
+
+void count(int a[], int length)
+{
+  cout << " " << endl; 
+  cout << "N" << "\t" << "COUNT" << endl; 
+  bool switched = true; 
+  int count = 0; 
+
+  for (int i = 0; i < length + 1; i++)
+  {
+    if ( i == 0)
+    {
+      count = 1; 
+      switched = false; 
+    }
+    else if (switched == false)
+    {
+      if (a[i] == a[i-1])
+      {
+        count++; 
+      } 
+      else if (a[i] != a[i-1])
+      {
+        cout << a[i - 1] << "\t" << count << endl; 
+        switched = true; 
+      }
+    } 
+    else if (switched == true)
+    {
+      count = 1; 
+      if (a[i] == a[i-1])
+      {
+        count++; 
+        switched = false; 
+      } 
+      else if (a[i] != a[i-1])
+      {
+        cout << a[i - 1] << "\t" << count << endl; 
+        switched = true; 
+      } 
+    }
+  }
 }
 
