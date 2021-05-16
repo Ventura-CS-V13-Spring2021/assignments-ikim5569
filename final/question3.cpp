@@ -138,6 +138,8 @@ void testStudent()
 
   cout << "Resetting student 1" << endl; 
   first.reset(); 
+
+ 
   
 
 
