@@ -126,22 +126,19 @@ void testStudent()
 
   Student first("Irene", classnum); 
   first.printValues(); 
-  //Student second(first); 
-
-  // cout << "testing copy constructor: printing student 2" << endl; 
-  // second.printValues(); 
-
+   
+  cout << "testing the copy constructor " << endl; 
   Student second(first); 
   second.printValues(); 
 
 
 
-  // cout << "testing input " << endl; 
-  // first.input("Jane", 2); 
-  // first.printValues(); 
+  cout << "testing input " << endl; 
+  first.input("Jane", 2); 
+  first.printValues(); 
 
-  // cout << "Resetting student 1" << endl; 
-  // first.reset(); 
+  cout << "Resetting student 1" << endl; 
+  first.reset(); 
   
 
 
