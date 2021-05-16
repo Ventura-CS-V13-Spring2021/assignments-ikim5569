@@ -21,7 +21,6 @@ class Student
   private:
     string name; 
     int num_classes; 
-    int used; 
     string *class_list;  
 
     
