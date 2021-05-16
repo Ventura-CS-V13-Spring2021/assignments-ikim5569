@@ -34,7 +34,7 @@ Student::Student() : name(), num_classes(0)
 
 Student::Student(string n, int num) : name(n), num_classes(num)
 {
-  class_list = new string[num];
+  class_list = new string[num_classes];
    for (int i = 0; i < num_classes; i++)
    {
        cout << "Enter the course name : ";
@@ -47,9 +47,10 @@ Student::Student( const Student& rhs)
   name = rhs.name; 
   num_classes = rhs.num_classes; 
   class_list = new string[num_classes]; 
-  for (int i = 0; i < used; i++)
+  for (int i = 0; i < num_classes; i++)
     class_list[i] = rhs.class_list[i]; 
 } 
+
 
 
 
@@ -80,13 +81,14 @@ void Student::printValues()
 void Student::reset()
 {
   num_classes = 0; 
-  //delete [] class_list; 
+  class_list = new string[num_classes];
 }
 
 Student& Student::operator = (const Student& rhs)
 {
   num_classes = rhs.num_classes; 
   name = rhs.name; 
+  class_list = new string[num_classes];
 
   for (int i = 0; i < num_classes; i++)
     class_list[i] = rhs.class_list[i]; 
@@ -129,12 +131,17 @@ void testStudent()
   // cout << "testing copy constructor: printing student 2" << endl; 
   // second.printValues(); 
 
-  cout << "testing input " << endl; 
-  first.input("Jane", 2); 
-  first.printValues(); 
+  Student second(first); 
+  second.printValues(); 
 
-  cout << "Resetting student 1" << endl; 
-  first.reset(); 
+
+
+  // cout << "testing input " << endl; 
+  // first.input("Jane", 2); 
+  // first.printValues(); 
+
+  // cout << "Resetting student 1" << endl; 
+  // first.reset(); 
   
 
 
